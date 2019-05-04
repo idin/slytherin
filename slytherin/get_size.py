@@ -1,4 +1,4 @@
-from collections import Mapping, Container
+from collections import Mapping, Iterable
 from sys import getsizeof
 
 def deep_getsizeof(o, ids):
@@ -27,7 +27,7 @@ def deep_getsizeof(o, ids):
 	if isinstance(o, Mapping):
 		return r + sum(d(k, ids) + d(v, ids) for k, v in o.items())
 
-	if isinstance(o, Container):
+	if isinstance(o, Iterable):
 		return r + sum(d(x, ids) for x in o)
 	# source: https://github.com/the-gigi/deep/blob/master/deeper.py#L80
 	return r
