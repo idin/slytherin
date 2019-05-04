@@ -6,3 +6,4 @@ from .remove_non_alphanumeric import remove_non_alphanumeric
 from .split_and_strip import split_and_strip
 from .colour import colour
 from .get_size import get_size
+from .trim import trim
