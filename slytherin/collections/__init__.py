@@ -9,4 +9,4 @@ from .merge_dictionaries import merge_dictionaries
 from .OrderedSet import OrderedSet
 from .remove_list_duplicates import remove_list_duplicates
 from .serialize_arguments import serialize_arguments
-
+from .flatten import flatten
