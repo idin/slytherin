@@ -3,16 +3,19 @@ import base64, base32hex
 
 
 def make_hashable(obj):
-	if isinstance(obj, (tuple, list)):
-		return tuple((make_hashable(e) for e in obj))
+	try:
+		return make_hashable(obj.__hashkey__())
+	except AttributeError:
+		if isinstance(obj, (tuple, list)):
+			return tuple((make_hashable(e) for e in obj))
 
-	if isinstance(obj, dict):
-		return tuple(sorted((k,make_hashable(v)) for k,v in obj.items()))
+		if isinstance(obj, dict):
+			return tuple(sorted((k,make_hashable(v)) for k,v in obj.items()))
 
-	if isinstance(obj, (set, frozenset)):
-		return tuple(sorted(make_hashable(e) for e in obj))
+		if isinstance(obj, (set, frozenset)):
+			return tuple(sorted(make_hashable(e) for e in obj))
 
-	return obj
+		return obj
 
 
 def hash_dictionary(dictionary, simplify=False, base=64):

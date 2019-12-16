@@ -6,7 +6,7 @@ def readme():
 
 setup(
 	name='slytherin',
-	version='1.0.3',
+	version='1.0.5',
 
 	description='Python library of useful but lonely functions and classes',
 	long_description=readme(),

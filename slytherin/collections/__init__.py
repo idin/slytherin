@@ -1,4 +1,4 @@
-from .dictionary import Dictionary
+from .Dictionary import Dictionary
 from .has_duplicates import has_duplicates, get_duplicates
 from .get_dict_product import get_dict_product
 from .is_iterable import is_iterable
@@ -11,3 +11,4 @@ from .remove_list_duplicates import remove_list_duplicates
 from .serialize_arguments import serialize_arguments
 from .flatten import flatten
 from .sum import sum
+from .Series import Series

@@ -1,6 +1,7 @@
 
 # The Dictionary class is the same as dict with additional methods
 
+DICT_DIR = dir(dict)
 
 class Dictionary(dict):
 
@@ -33,8 +34,18 @@ class Dictionary(dict):
 
 		return Dictionary(zip(keys, values))
 
-	@staticmethod
-	def from_dict(x):
-		return Dictionary.from_lists(keys = x.keys(), values = x.values())
+	def __setitem__(self, key, value):
+		if key in DICT_DIR:
+			raise KeyError(f'key "{key}" is not allowed')
+		else:
+			super().__setitem__(key, value)
+
+	def __getattribute__(self, item):
+		if item in DICT_DIR:
+			return super().__getattribute__(item)
+		else:
+			return self[item]
 
 
+	def __dir__(self):
+		return super().__dir__() + [str(x) for x in self.keys()]
