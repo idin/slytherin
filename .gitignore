@@ -2,3 +2,6 @@
 slytherin/collections/__pycache__/
 
 slytherin/numbers/__pycache__/
+build
+dist
+slytherin.egg-info
