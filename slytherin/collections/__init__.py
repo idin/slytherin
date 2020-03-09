@@ -12,3 +12,4 @@ from .serialize_arguments import serialize_arguments
 from .flatten import flatten
 from .sum import sum
 from .Series import Series
+from .create_grid import create_grid

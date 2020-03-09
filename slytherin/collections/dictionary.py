@@ -44,8 +44,10 @@ class Dictionary(dict):
 		if item in DICT_DIR:
 			return super().__getattribute__(item)
 		else:
-			return self[item]
-
+			try:
+				return self[item]
+			except:
+				return super().__getattribute__(item)
 
 	def __dir__(self):
 		return super().__dir__() + [str(x) for x in self.keys()]
