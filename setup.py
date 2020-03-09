@@ -6,7 +6,7 @@ def readme():
 
 setup(
 	name='slytherin',
-	version='2019.12.29.4',
+	version='2020.1.6',
 
 	description='Python library of useful but lonely functions and classes',
 	long_description=readme(),
@@ -17,7 +17,7 @@ setup(
 	author_email='py@idin.ca',
 	license='MIT',
 	packages=find_packages(exclude=("jupyter_tests", ".idea", ".git")),
-	install_requires=['base32hex'],
+	install_requires=['base32hex', 'geopy'],
 	python_requires='~=3.6',
 	zip_safe=False
 )
