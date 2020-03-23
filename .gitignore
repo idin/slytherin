@@ -7,3 +7,4 @@ dist
 slytherin.egg-info
 slytherin/hash/__pycache__
 slytherin/immutability/__pycache__
+*.lucy
