@@ -11,7 +11,7 @@ def make_hashable(obj):
 			return tuple((make_hashable(e) for e in obj))
 
 		if isinstance(obj, dict):
-			return tuple(sorted((k, make_hashable(v)) for k,v in obj.items()))
+			return tuple(sorted((k, make_hashable(v)) for k, v in obj.items()))
 
 		if isinstance(obj, (set, frozenset)):
 			return tuple(sorted(make_hashable(e) for e in obj))
