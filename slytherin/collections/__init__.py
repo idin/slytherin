@@ -13,3 +13,4 @@ from .flatten import flatten
 from .sum import sum
 from .Series import Series
 from .create_grid import create_grid
+from .cross_lists import cross_lists
