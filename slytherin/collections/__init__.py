@@ -1,4 +1,4 @@
-from .Dictionary import Dictionary
+from .dictionary import Dictionary
 from .has_duplicates import has_duplicates, get_duplicates
 from .get_dict_product import get_dict_product
 from .is_iterable import is_iterable
