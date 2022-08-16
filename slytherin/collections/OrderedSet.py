@@ -3,7 +3,7 @@
 import collections
 
 
-class OrderedSet(collections.abc.MutableSet):
+class OrderedSet(collections.MutableSet):
 
 	def __init__(self, iterable=None):
 		self.end = end = []

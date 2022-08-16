@@ -11,7 +11,7 @@ def make_hashable(obj):
 			return tuple((make_hashable(e) for e in obj))
 
 		if isinstance(obj, dict):
-			return tuple(sorted((k, make_hashable(v)) for k, v in obj.items()))
+			return tuple(sorted((k, make_hashable(v)) for k,v in obj.items()))
 
 		if isinstance(obj, (set, frozenset)):
 			return tuple(sorted(make_hashable(e) for e in obj))
@@ -57,7 +57,7 @@ def hash_object(obj, base=64):
 	if base == 64:
 		return base64.b64encode(hash_maker.digest()).decode()
 	elif base == 32:
-		return base32hex.b32encode(hash_maker.digest()).replace('=', '-')
+		return base32hex.b32encode(hash_maker.digest()).replace('=', '-').replace('----', 'x032')
 	else:
 		raise ValueError(f'base{base} is unknown!')
 

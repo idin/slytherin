@@ -1,4 +1,4 @@
-from .dictionary import Dictionary
+from .Dictionary import Dictionary
 from .has_duplicates import has_duplicates, get_duplicates
 from .get_dict_product import get_dict_product
 from .is_iterable import is_iterable
@@ -14,3 +14,4 @@ from .sum import sum
 from .Series import Series
 from .create_grid import create_grid
 from .cross_lists import cross_lists
+from .find_duplicates import find_duplicates
