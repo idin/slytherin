@@ -1,14 +1,12 @@
 from setuptools import setup, find_packages
 
-
 def readme():
 	with open('./README.md') as f:
 		return f.read()
 
-
 setup(
 	name='slytherin',
-	version='2020.3.9',
+	version='2020.11.12',
 
 	description='Python library of useful but lonely functions and classes',
 	long_description=readme(),
