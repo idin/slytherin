@@ -9,6 +9,54 @@ pip install slytherin
 
 ## Usage
 
+### `collections`
+
+#### `cross_lists()`
+
+```python
+from slytherin.collections import cross_lists
+list1 = [1, 2, 3]
+list2 = [4, 5]
+list3 = [[6, 7], [8, 9]]
+
+cross_lists(list1, list2, list3)
+```
+outputs:
+```
+[(1, 4, [6, 7]),
+ (1, 4, [8, 9]),
+ (1, 5, [6, 7]),
+ (1, 5, [8, 9]),
+ (2, 4, [6, 7]),
+ (2, 4, [8, 9]),
+ (2, 5, [6, 7]),
+ (2, 5, [8, 9]),
+ (3, 4, [6, 7]),
+ (3, 4, [8, 9]),
+ (3, 5, [6, 7]),
+ (3, 5, [8, 9])]
+```
+
+```python
+cross_lists([list1, list2, list3])
+```
+also outputs:
+```
+[(1, 4, [6, 7]),
+ (1, 4, [8, 9]),
+ (1, 5, [6, 7]),
+ (1, 5, [8, 9]),
+ (2, 4, [6, 7]),
+ (2, 4, [8, 9]),
+ (2, 5, [6, 7]),
+ (2, 5, [8, 9]),
+ (3, 4, [6, 7]),
+ (3, 4, [8, 9]),
+ (3, 5, [6, 7]),
+ (3, 5, [8, 9])]
+```
+
+
 ### get_size(obj)
 The *get_size()* method calculates the memory footprint of a Python object recursively. 
 
